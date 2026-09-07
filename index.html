@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clearelay</title>
+<meta name="description" content="Clearelay brings every customer conversation — messages, relationships, and follow-ups — together in one calm workspace.">
+<meta name="theme-color" content="#0A1F1B">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clearelay">
+<meta property="og:title" content="Clearelay — Stay close to every customer">
+<meta property="og:description" content="Messages, relationships, and follow-ups come together in one calm workspace.">
+<meta property="og:image" content="https://clearelay.com/clearelay-preview.png">
+<meta property="og:url" content="https://clearelay.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clearelay — Stay close to every customer">
+<meta name="twitter:description" content="Messages, relationships, and follow-ups come together in one calm workspace.">
+<meta name="twitter:image" content="https://clearelay.com/clearelay-preview.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,11 +34,14 @@
       </span>
       Clearelay
     </div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="#preview">Product</a>
       <a href="#features">Features</a>
     </nav>
     <div class="nav-cta">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
       <a href="#" class="btn btn-ghost-dark">Sign in</a>
       <a href="#" class="btn btn-primary">Start free</a>
     </div>
@@ -49,7 +67,7 @@
     <div class="preview-head">
       <p class="label">Product</p>
       <h2>Everything happening today, in one view.</h2>
-      <img class="preview-image" src="Clearelay preview.png" alt="Clearelay dashboard preview">
+      <img class="preview-image" src="clearelay-preview.png" alt="Clearelay dashboard preview">
     </div>
   </div>
 </section>
@@ -99,5 +117,6 @@
   </div>
 </footer>
 
+<script src="main.js" defer></script>
 </body>
 </html>
