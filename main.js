@@ -14,4 +14,13 @@
       toggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  var accessForm = document.getElementById('accessForm');
+  var formNote = document.getElementById('formNote');
+  if (accessForm && formNote) {
+    accessForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      formNote.hidden = false;
+    });
+  }
 })();
