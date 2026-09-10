@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clearelay</title>
-<meta name="description" content="Clearelay brings every customer conversation — messages, relationships, and follow-ups — together in one calm workspace.">
+<meta name="description" content="Clearelay brings scheduling, texting, calls, email, and marketing into one clear, honest workspace for running your business.">
 <meta name="theme-color" content="#0A1F1B">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Clearelay">
-<meta property="og:title" content="Clearelay — Stay close to every customer">
-<meta property="og:description" content="Messages, relationships, and follow-ups come together in one calm workspace.">
+<meta property="og:title" content="Clearelay — Scheduling, communication, and marketing in one place">
+<meta property="og:description" content="Clearelay brings scheduling, texting, calls, email, and marketing into one clear, honest workspace for running your business.">
 <meta property="og:image" content="https://clearelay.com/clearelay-preview.png">
 <meta property="og:url" content="https://clearelay.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Clearelay — Stay close to every customer">
-<meta name="twitter:description" content="Messages, relationships, and follow-ups come together in one calm workspace.">
+<meta name="twitter:title" content="Clearelay — Scheduling, communication, and marketing in one place">
+<meta name="twitter:description" content="Clearelay brings scheduling, texting, calls, email, and marketing into one clear, honest workspace for running your business.">
 <meta name="twitter:image" content="https://clearelay.com/clearelay-preview.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,8 +43,7 @@
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
-      <a href="#" class="btn btn-ghost-dark">Sign in</a>
-      <a href="#" class="btn btn-primary">Start free</a>
+      <a href="#request-access" class="btn btn-primary">Request early access</a>
     </div>
   </div>
 </header>
@@ -52,12 +51,11 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-inner">
-      <div class="eyebrow"><span class="dash"></span> Your conversations, organized</div>
-      <h1>Stay close to every customer.</h1>
-      <p class="sub">Messages, relationships, and follow-ups come together in one calm workspace.</p>
+      <div class="eyebrow"><span class="dash"></span>Clear communication, done right</div>
+      <h1>One place to run your scheduling, communication, and marketing.</h1>
+      <p class="sub">Clearelay brings scheduling, texting, calls, email, and the marketing tools that tie them together — into one calm, transparent workspace.</p>
       <div class="hero-actions">
-        <a href="#" class="btn btn-primary">Start free</a>
-        <a href="#" class="btn btn-ghost-dark">Sign in</a>
+        <a href="#request-access" class="btn btn-primary">Request early access</a>
       </div>
     </div>
   </div>
@@ -81,18 +79,21 @@
     <div class="features-grid">
       <div class="feature-card">
         <div class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.4"/></svg></div>
-        <h4>One inbox</h4>
-        <p>Every channel lands in the same thread, in order.</p>
+        <p class="kicker">Scheduling</p>
+        <h4>Nothing falls through the cracks</h4>
+        <p>Automatic reminders and synced calendars mean no missed appointments and no double-bookings.</p>
       </div>
       <div class="feature-card">
         <div class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.4"/></svg></div>
-        <h4>Delivery status</h4>
-        <p>See the moment a message is received and read.</p>
+        <p class="kicker">Communications</p>
+        <h4>No more juggling five apps to talk to one customer</h4>
+        <p>Texts, calls, and emails land in the same thread, so your team always knows the full conversation.</p>
       </div>
       <div class="feature-card">
         <div class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.4"/></svg></div>
-        <h4>Your whole team</h4>
-        <p>Hand off a conversation without the customer noticing.</p>
+        <p class="kicker">Marketing</p>
+        <h4>Marketing that doesn't feel like spam</h4>
+        <p>Campaigns built from the relationships you're already having, not cold lists.</p>
       </div>
     </div>
   </div>
@@ -126,10 +127,21 @@
   </div>
 </section>
 
-<section class="cta">
+<section class="cta" id="request-access">
   <div class="wrap">
-    <h2>Stay close to every customer, starting today.</h2>
-    <a href="#" class="btn btn-primary">Start free</a>
+    <h2>Ready to see Clearelay in action?</h2>
+    <p class="cta-sub">Tell us a bit about your business and we'll get you set up with a test instance.</p>
+    <!-- Not wired up yet: submission is intentionally disabled until the form backend is decided. -->
+    <form class="access-form" id="accessForm">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Work email" required>
+      </div>
+      <input type="text" name="company" placeholder="Company name">
+      <textarea name="message" placeholder="What are you hoping to use Clearelay for?" rows="3"></textarea>
+      <button type="submit" class="btn btn-primary">Request early access</button>
+      <p class="form-note" id="formNote" hidden>Thanks for the interest! We're not accepting requests yet — check back soon.</p>
+    </form>
   </div>
 </section>
 
