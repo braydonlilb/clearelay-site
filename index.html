@@ -131,16 +131,22 @@
   <div class="wrap">
     <h2>Ready to see Clearelay in action?</h2>
     <p class="cta-sub">Tell us a bit about your business and we'll get you set up with a test instance.</p>
-    <!-- Not wired up yet: submission is intentionally disabled until the form backend is decided. -->
-    <form class="access-form" id="accessForm">
+    <form class="access-form" id="accessForm" action="https://formsubmit.co/ajax/support@clearelay.com" method="POST">
+      <input type="hidden" name="_subject" value="New Clearelay early access request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="form-row">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Work email" required>
+        <input type="text" name="name" placeholder="Your name" autocomplete="name" aria-label="Your name" required>
+        <input type="email" name="email" placeholder="Work email" autocomplete="email" aria-label="Work email" required>
       </div>
-      <input type="text" name="company" placeholder="Company name">
-      <textarea name="message" placeholder="What are you hoping to use Clearelay for?" rows="3"></textarea>
+      <div class="form-row">
+        <input type="text" name="company" placeholder="Company name" autocomplete="organization" aria-label="Company name">
+        <input type="tel" name="phone" placeholder="Phone number (optional)" autocomplete="tel" aria-label="Phone number (optional)">
+      </div>
+      <textarea name="message" placeholder="What are you hoping to use Clearelay for?" aria-label="What are you hoping to use Clearelay for?" rows="3"></textarea>
       <button type="submit" class="btn btn-primary">Request early access</button>
-      <p class="form-note" id="formNote" hidden>Thanks for the interest! We're not accepting requests yet — check back soon.</p>
+      <p class="form-note" id="formNote" role="status" aria-live="polite" hidden></p>
     </form>
   </div>
 </section>

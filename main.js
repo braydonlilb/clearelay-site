@@ -18,9 +18,39 @@
   var accessForm = document.getElementById('accessForm');
   var formNote = document.getElementById('formNote');
   if (accessForm && formNote) {
-    accessForm.addEventListener('submit', function (e) {
+    accessForm.addEventListener('submit', async function (e) {
       e.preventDefault();
-      formNote.hidden = false;
+
+      var submitButton = accessForm.querySelector('button[type="submit"]');
+      var originalButtonText = submitButton.textContent;
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending…';
+      formNote.hidden = true;
+      formNote.classList.remove('is-error');
+
+      try {
+        var response = await fetch(accessForm.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(accessForm)
+        });
+        var result = await response.json();
+
+        if (!response.ok || result.success === false) {
+          throw new Error('The request could not be sent.');
+        }
+
+        accessForm.reset();
+        formNote.textContent = 'Thanks! Your request has been sent. We’ll be in touch soon.';
+        formNote.hidden = false;
+      } catch (error) {
+        formNote.textContent = 'We couldn’t send your request. Please email support@clearelay.com.';
+        formNote.classList.add('is-error');
+        formNote.hidden = false;
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
     });
   }
 })();

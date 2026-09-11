@@ -331,7 +331,10 @@ header.dark {
 .access-form textarea:focus { outline: none; border-color: var(--teal); }
 .access-form textarea { resize: vertical; }
 .access-form .btn { margin-top: 4px; align-self: center; }
+.access-form .btn:disabled { cursor: wait; opacity: 0.7; }
 .access-form .form-note { text-align: center; color: var(--teal-light); font-size: 14px; margin-top: 4px; }
+.access-form .form-note.is-error { color: #FFAAA0; }
+.access-form .form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 @media (max-width: 600px) {
   .access-form .form-row { flex-direction: column; }
 }
